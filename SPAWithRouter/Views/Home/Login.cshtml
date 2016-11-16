@@ -1,0 +1,22 @@
+﻿<label>Come On!</label>
+<input /><button onclick="toSpa()">aaa</button>
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script>
+    function toSpa() {
+
+        $.ajax({
+            url: "Home/LoginSpa",
+            type:"POST",
+            data: {returnUrl:"aaaaa"}
+        })
+        .done(function (data) {
+            console.log("success!");
+            location.href = "/spa/SpaPage";
+        })
+        .fail(function (err) {
+            console.log("fail!");
+        });
+        
+    }
+
+</script>

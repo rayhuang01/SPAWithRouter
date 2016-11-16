@@ -1,0 +1,9 @@
+﻿<span data-bind="text:test"></span><br />
+<a href="#" data-bind="click:redirectToPageB">Direct B</a>
+<ul data-bind="foreach: products()">
+    <li class="product">
+        <strong data-bind="text: name"></strong>
+        <like-or-dislike params="name:name,value: userRating"></like-or-dislike>
+    </li>
+</ul>
+<button data-bind="click: addProduct">Add a product</button>

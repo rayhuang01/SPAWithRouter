@@ -1,0 +1,17 @@
+﻿<div data-bind="if:page()">
+    <div data-bind="template:{name:'templates/template/'+page().name+'.html',data:page().data}"></div>
+    @*<!--ko if: name()=='a'-->
+        <!--ko with: data()-->
+        @Html.Partial("PageA")
+        <!--/ko-->
+        <!--/ko-->
+        <!--ko if: name()=='b'-->
+        <!--ko with: data() -->
+        @Html.Partial("PageB")
+        <!--/ko-->
+        <!--/ko-->*@
+</div>
+
+<script src="~/Scripts/lib/require.js"></script>
+@*<script src="~/Scripts/lib/require-text.js"></script>*@
+<script src="~/Scripts/common.js"></script>
